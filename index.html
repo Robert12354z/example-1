@@ -9,15 +9,11 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script>
     var WC_PHOTO = "./wc-photo.webp";
-    window.onerror = function(msg, src, line, col, err) {
-      document.getElementById("err").textContent = msg + " (" + src + " " + line + ":" + col + ")";
-    };
   </script>
 </head>
 <body style="margin:0">
-  <div id="err" style="color:red;padding:16px;font-family:monospace;white-space:pre-wrap"></div>
-  <div id="root"><p style="padding:20px;font-family:sans-serif">Loading…</p></div>
-  <script type="text/babel">
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
     const { useState, useEffect } = React;
 
 /*
@@ -844,7 +840,11 @@ const S = {
   footBottom: { borderTop: "1px solid rgba(255,255,255,0.08)", textAlign: "center", padding: "20px 24px", fontSize: 13.5, color: "#7d8aa3" },
 };
 
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    try {
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    } catch(e) {
+      document.getElementById('root').innerHTML = '<pre style="color:red;padding:20px">' + e + '</pre>';
+    }
   </script>
 </body>
 </html>
