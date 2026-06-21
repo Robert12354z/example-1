@@ -22129,7 +22129,7 @@
   .wc-overlay-item:hover { color: #fff !important; background: rgba(255,255,255,0.06); }
 
   /* --- Ken Burns drift on hero photo --- */
-  @keyframes wcKen { 0% { transform: scale(1.04) translate(0,0); } 100% { transform: scale(1.12) translate(-1.5%, -1.5%); } }
+  @keyframes wcKen { 0% { transform: scale(1.0) translate(0,0); } 100% { transform: scale(1.03) translate(-0.5%, -0.5%); } }
   .wc-kenburns { animation: wcKen 26s ease-in-out infinite alternate; }
 
   /* --- Hero load-in sequence --- */
