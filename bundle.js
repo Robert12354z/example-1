@@ -22193,7 +22193,7 @@
         // valley scene layers
         scene: { position: "absolute", inset: 0, overflow: "hidden", zIndex: 1, pointerEvents: "none" },
         scenePhoto: { position: "absolute", inset: 0, backgroundSize: "cover", backgroundPosition: "center 40%" },
-        sceneTint: { position: "absolute", inset: 0, background: `linear-gradient(120deg, rgba(8,30,60,0.82) 0%, rgba(11,46,92,0.55) 45%, rgba(46,120,199,0.30) 100%)` },
+        sceneTint: { position: "absolute", inset: 0, background: `linear-gradient(120deg, rgba(8,30,60,0.55) 0%, rgba(11,46,92,0.30) 45%, rgba(46,120,199,0.08) 100%)` },
         sceneSvg: { position: "absolute", bottom: 0, left: 0, width: "100%", height: "40%" },
         mist: { position: "absolute", bottom: 0, left: 0, width: "200%", height: "45%", background: "radial-gradient(ellipse at center, rgba(120,170,220,0.14), transparent 60%)" },
         heroInner: { maxWidth: 1120, margin: "0 auto", padding: "110px 24px 120px", position: "relative", zIndex: 3 },
