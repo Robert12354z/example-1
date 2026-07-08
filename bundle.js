@@ -21461,10 +21461,10 @@
     }
   });
 
-  // jimmy-hero.png
-  var require_jimmy_hero = __commonJS({
-    "jimmy-hero.png"(exports, module) {
-      module.exports = "./jimmy-hero-CIDZO7MZ.png";
+  // jimmy-hero-new.jpg
+  var require_jimmy_hero_new = __commonJS({
+    "jimmy-hero-new.jpg"(exports, module) {
+      module.exports = "./jimmy-hero-new-APLRUZ37.jpg";
     }
   });
 
@@ -21588,7 +21588,7 @@
     const [cutout, setCutout] = import_react.default.useState(null);
     import_react.default.useEffect(() => {
       const img = new Image();
-      img.src = require_jimmy_hero();
+      img.src = require_jimmy_hero_new();
       img.onload = () => {
         const canvas = document.createElement("canvas");
         canvas.width = img.width;
@@ -21600,10 +21600,10 @@
         for (let i = 0; i < d.length; i += 4) {
           const r = d[i], g = d[i + 1], b = d[i + 2];
           const brightness = (r + g + b) / 3;
-          if (brightness < 18) {
+          if (brightness > 238) {
             d[i + 3] = 0;
-          } else if (brightness < 48) {
-            d[i + 3] = Math.round((brightness - 18) / 30 * 255);
+          } else if (brightness > 210) {
+            d[i + 3] = Math.round((238 - brightness) / 28 * 255);
           }
         }
         ctx.putImageData(imgData, 0, 0);
@@ -21637,7 +21637,7 @@
       zIndex: 1,
       pointerEvents: "none",
       background: "linear-gradient(to right, rgba(5,15,45,0.78) 0%, rgba(5,15,45,0.45) 55%, rgba(5,15,45,0.15) 100%)"
-    } }), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroRing, className: "wc-spin" }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 460, stars: 10, opacity: 0.12 })), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroInner, display: "flex", alignItems: "flex-end", gap: 0, padding: "70px 0 0", position: "relative", zIndex: 3 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 55%", paddingBottom: 80, paddingLeft: 24, paddingTop: 20 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.eyebrow, className: "wc-load wc-load-1" }, "West Covina \xB7 District 5 \xB7 Est. 1923"), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.heroName, className: "wc-load wc-load-2" }, "Jimmy Lima"), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.4rem,3.5vw,2.4rem)", fontWeight: 800, lineHeight: 1.15, fontStyle: "italic" }, className: "wc-load wc-load-3" }, "Leadership that Listens."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.1rem,2.5vw,1.8rem)", fontWeight: 700, marginTop: 6, opacity: 0.95, color: C.gold }, className: "wc-load wc-load-3" }, "Putting Residents First."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(0.92rem,1.5vw,1.08rem)", fontWeight: 400, marginTop: 18, maxWidth: 520, opacity: 0.88, lineHeight: 1.65 }, className: "wc-load wc-load-3" }, "For more than 25 years, I've dedicated my career to serving families, solving problems, and helping people succeed. I'm running for City Council because I believe West Covina deserves honest leadership, responsible priorities, and a government that always puts residents first."), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroCtas, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnPrimary, className: "wc-btn", onClick: () => go("Get Involved") }, "Get Involved"), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGhost, className: "wc-btn", onClick: () => go("Meet Jimmy") }, "Meet Jimmy"))), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 45%", alignSelf: "flex-end" }, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement(JimmyPortrait, { style: { display: "block", width: "100%", maxHeight: 660, objectFit: "contain", objectPosition: "bottom center" } })))), /* @__PURE__ */ import_react.default.createElement("section", { style: S.section }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pillars }, [
+    } }), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroRing, className: "wc-spin" }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 460, stars: 10, opacity: 0.12 })), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroInner, display: "flex", alignItems: "flex-end", gap: 0, padding: "70px 0 0", position: "relative", zIndex: 3 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "1 1 40%", paddingBottom: 80, paddingLeft: 24, paddingTop: 20 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.eyebrow, className: "wc-load wc-load-1" }, "West Covina \xB7 District 5 \xB7 Est. 1923"), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.heroName, className: "wc-load wc-load-2" }, "Jimmy Lima"), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.4rem,3.5vw,2.4rem)", fontWeight: 800, lineHeight: 1.15, fontStyle: "italic" }, className: "wc-load wc-load-3" }, "Leadership that Listens."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.1rem,2.5vw,1.8rem)", fontWeight: 700, marginTop: 6, opacity: 0.95, color: C.gold }, className: "wc-load wc-load-3" }, "Putting Residents First."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(0.92rem,1.5vw,1.08rem)", fontWeight: 400, marginTop: 18, maxWidth: 520, opacity: 0.88, lineHeight: 1.65 }, className: "wc-load wc-load-3" }, "For more than 25 years, I've dedicated my career to serving families, solving problems, and helping people succeed. I'm running for City Council because I believe West Covina deserves honest leadership, responsible priorities, and a government that always puts residents first."), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroCtas, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnPrimary, className: "wc-btn", onClick: () => go("Get Involved") }, "Get Involved"), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGhost, className: "wc-btn", onClick: () => go("Meet Jimmy") }, "Meet Jimmy"))), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 60%", alignSelf: "flex-end" }, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement(JimmyPortrait, { style: { display: "block", width: "100%", maxHeight: 780, objectFit: "contain", objectPosition: "bottom center" } })))), /* @__PURE__ */ import_react.default.createElement("section", { style: S.section }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pillars }, [
       ["Fiscal Responsibility", "Responsible budgets, independent oversight, and every taxpayer dollar accounted for \u2014 because a financially strong city is the foundation of everything else."],
       ["Safe Neighborhoods", "Supporting our police and fire departments, expanding crime prevention, and addressing homelessness with both compassion and accountability."],
       ["Community First", "A City Hall that listens before it acts, holds regular town halls, and earns residents' trust through transparency, honesty, and open government."]
