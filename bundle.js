@@ -21585,33 +21585,7 @@
     return /* @__PURE__ */ import_react.default.createElement("div", { ref, className: "wc-reveal", style: { transitionDelay: `${delay}ms`, ...style } }, children);
   }
   function JimmyPortrait({ style }) {
-    const [cutout, setCutout] = import_react.default.useState(null);
-    import_react.default.useEffect(() => {
-      const img = new Image();
-      img.src = require_jimmy_hero2();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0);
-        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const d = imgData.data;
-        for (let i = 0; i < d.length; i += 4) {
-          const r = d[i], g = d[i + 1], b = d[i + 2];
-          const brightness = (r + g + b) / 3;
-          if (brightness < 18) {
-            d[i + 3] = 0;
-          } else if (brightness < 48) {
-            d[i + 3] = Math.round((brightness - 18) / 30 * 255);
-          }
-        }
-        ctx.putImageData(imgData, 0, 0);
-        setCutout(canvas.toDataURL("image/png"));
-      };
-    }, []);
-    if (!cutout) return null;
-    return /* @__PURE__ */ import_react.default.createElement("img", { src: cutout, alt: "Jimmy Lima", style });
+    return /* @__PURE__ */ import_react.default.createElement("img", { src: require_jimmy_hero2(), alt: "Jimmy Lima", style });
   }
   function Home({ go }) {
     return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("section", { style: S.hero }, /* @__PURE__ */ import_react.default.createElement(
