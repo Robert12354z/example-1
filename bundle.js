@@ -21587,7 +21587,8 @@
   function JimmyPortrait({ style }) {
     return /* @__PURE__ */ import_react.default.createElement("img", { src: require_jimmy_hero2(), alt: "Jimmy Lima", style });
   }
-  function Home({ go }) {
+  function Home({ go, lang }) {
+    const t = LANGS[lang];
     return /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("section", { style: S.hero }, /* @__PURE__ */ import_react.default.createElement(
       "img",
       {
@@ -21611,7 +21612,7 @@
       zIndex: 1,
       pointerEvents: "none",
       background: "linear-gradient(to right, rgba(5,15,45,0.78) 0%, rgba(5,15,45,0.45) 55%, rgba(5,15,45,0.15) 100%)"
-    } }), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroRing, className: "wc-spin" }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 460, stars: 10, opacity: 0.12 })), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroInner, display: "flex", alignItems: "flex-end", gap: 0, padding: "70px 0 0", position: "relative", zIndex: 3 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 42%", paddingBottom: 80, paddingLeft: 24, paddingTop: 20 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.eyebrow, className: "wc-load wc-load-1" }, "West Covina \xB7 District 5 \xB7 Est. 1923"), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.heroName, className: "wc-load wc-load-2" }, "Jimmy Lima"), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.4rem,3.5vw,2.4rem)", fontWeight: 800, lineHeight: 1.15, fontStyle: "italic" }, className: "wc-load wc-load-3" }, "Leadership that Listens."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.1rem,2.5vw,1.8rem)", fontWeight: 700, marginTop: 6, opacity: 0.95, color: C.gold }, className: "wc-load wc-load-3" }, "Putting Residents First."), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(0.92rem,1.5vw,1.08rem)", fontWeight: 400, marginTop: 18, maxWidth: 520, opacity: 0.88, lineHeight: 1.65 }, className: "wc-load wc-load-3" }, "For more than 25 years, I've dedicated my career to serving families, solving problems, and helping people succeed. I'm running for City Council because I believe West Covina deserves honest leadership, responsible priorities, and a government that always puts residents first."), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroCtas, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnPrimary, className: "wc-btn", onClick: () => go("Get Involved") }, "Get Involved"), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGhost, className: "wc-btn", onClick: () => go("Meet Jimmy") }, "Meet Jimmy"))), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 62%", alignSelf: "flex-end", display: "flex", justifyContent: "flex-end", marginRight: -40 }, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement(JimmyPortrait, { style: { display: "block", width: "100%", maxHeight: 950, objectFit: "contain", objectPosition: "bottom right" } })))), /* @__PURE__ */ import_react.default.createElement("section", { style: S.section }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pillars }, [
+    } }), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroRing, className: "wc-spin" }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 460, stars: 10, opacity: 0.12 })), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroInner, display: "flex", alignItems: "flex-end", gap: 0, padding: "70px 0 0", position: "relative", zIndex: 3 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 42%", paddingBottom: 80, paddingLeft: 24, paddingTop: 20 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.eyebrow, className: "wc-load wc-load-1" }, t.eyebrow), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.heroName, className: "wc-load wc-load-2" }, "Jimmy Lima"), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.4rem,3.5vw,2.4rem)", fontWeight: 800, lineHeight: 1.15, fontStyle: "italic" }, className: "wc-load wc-load-3" }, t.tag1), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(1.1rem,2.5vw,1.8rem)", fontWeight: 700, marginTop: 6, opacity: 0.95, color: C.gold }, className: "wc-load wc-load-3" }, t.tag2), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.heroTag, fontSize: "clamp(0.92rem,1.5vw,1.08rem)", fontWeight: 400, marginTop: 18, maxWidth: 520, opacity: 0.88, lineHeight: 1.65 }, className: "wc-load wc-load-3" }, t.bio), /* @__PURE__ */ import_react.default.createElement("div", { style: S.heroCtas, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnPrimary, className: "wc-btn", onClick: () => go("Get Involved") }, t.btn1), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGhost, className: "wc-btn", onClick: () => go("Meet Jimmy") }, t.btn2))), /* @__PURE__ */ import_react.default.createElement("div", { style: { flex: "0 0 62%", alignSelf: "flex-end", display: "flex", justifyContent: "flex-end", marginRight: -40 }, className: "wc-load wc-load-4" }, /* @__PURE__ */ import_react.default.createElement(JimmyPortrait, { style: { display: "block", width: "100%", maxHeight: 950, objectFit: "contain", objectPosition: "bottom right" } })))), /* @__PURE__ */ import_react.default.createElement("section", { style: S.section }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pillars }, [
       ["Fiscal Responsibility", "Responsible budgets, independent oversight, and every taxpayer dollar accounted for \u2014 because a financially strong city is the foundation of everything else."],
       ["Safe Neighborhoods", "Supporting our police and fire departments, expanding crime prevention, and addressing homelessness with both compassion and accountability."],
       ["Community First", "A City Hall that listens before it acts, holds regular town halls, and earns residents' trust through transparency, honesty, and open government."]
@@ -21743,57 +21744,64 @@
   }
   function App() {
     const [page, setPage] = (0, import_react.useState)("Home");
-    const [menu, setMenu] = (0, import_react.useState)(false);
+    const [lang, setLang] = (0, import_react.useState)("en");
+    const [langOpen, setLangOpen] = (0, import_react.useState)(false);
     const go = (p) => {
       setPage(p);
-      setMenu(false);
+      setLangOpen(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
     (0, import_react.useEffect)(() => {
       document.title = `Jimmy Lima \u2014 ${page}`;
     }, [page]);
     (0, import_react.useEffect)(() => {
-      const onKey = (e) => {
-        if (e.key === "Escape") setMenu(false);
-      };
-      window.addEventListener("keydown", onKey);
-      return () => window.removeEventListener("keydown", onKey);
+      const close = () => setLangOpen(false);
+      window.addEventListener("click", close);
+      return () => window.removeEventListener("click", close);
     }, []);
+    const t = LANGS[lang];
     const Body = { Home, "Meet Jimmy": About, Blueprint: Issues, Endorsements, "Get Involved": Volunteer, Contact }[page];
-    return /* @__PURE__ */ import_react.default.createElement("div", { style: S.root }, /* @__PURE__ */ import_react.default.createElement("style", null, GLOBAL), /* @__PURE__ */ import_react.default.createElement("header", { style: S.header }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.headRow } }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.brand, onClick: () => go("Home") }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 34, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", { style: S.brandText }, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement(
-      "button",
-      {
-        style: S.waffle,
-        className: "wc-waffle",
-        onClick: () => setMenu(true),
-        "aria-label": "Open navigation menu",
-        "aria-expanded": menu
-      },
-      Array.from({ length: 9 }).map((_, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i, style: S.waffleDot }))
-    ))), menu && /* @__PURE__ */ import_react.default.createElement("div", { style: S.overlay, className: "wc-overlay", role: "dialog", "aria-modal": "true", "aria-label": "Site navigation" }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.overlayClose, onClick: () => setMenu(false), "aria-label": "Close menu" }, "\xD7"), /* @__PURE__ */ import_react.default.createElement("div", { style: S.overlayRing }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 300, stars: 10, opacity: 0.12 })), /* @__PURE__ */ import_react.default.createElement("nav", { style: S.overlayNav }, PAGES.map((p, i) => /* @__PURE__ */ import_react.default.createElement(
+    return /* @__PURE__ */ import_react.default.createElement("div", { style: S.root }, /* @__PURE__ */ import_react.default.createElement("style", null, GLOBAL), /* @__PURE__ */ import_react.default.createElement("header", { style: S.header }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.headRow } }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.brand, onClick: () => go("Home") }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 34, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", { style: S.brandText }, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("nav", { style: { display: "flex", alignItems: "center", gap: 4 } }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement(
       "button",
       {
         key: p,
         onClick: () => go(p),
-        style: { ...S.overlayItem, ...page === p ? S.overlayActive : {}, animationDelay: `${i * 60}ms` },
-        className: "wc-overlay-item"
+        style: { ...S.navLink, ...page === p ? S.navLinkActive : {} },
+        className: "wc-navlink"
       },
-      /* @__PURE__ */ import_react.default.createElement("span", { style: S.overlayNum }, String(i + 1).padStart(2, "0")),
-      p
+      t.nav[p]
     )), /* @__PURE__ */ import_react.default.createElement(
       "a",
       {
         href: DONATE_URL,
         target: "_blank",
         rel: "noopener noreferrer",
-        style: { ...S.overlayItem, ...S.overlayDonate, animationDelay: `${PAGES.length * 60}ms` },
-        className: "wc-overlay-item"
+        style: S.navContribute
       },
-      /* @__PURE__ */ import_react.default.createElement("span", { style: { ...S.overlayNum, color: C.navy } }, "\u2605"),
-      "Contribute"
-    ))), /* @__PURE__ */ import_react.default.createElement("main", null, /* @__PURE__ */ import_react.default.createElement(Body, { go })), /* @__PURE__ */ import_react.default.createElement("footer", { style: S.footer }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.footRow } }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBrand }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 28, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", null, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("p", { style: S.footDisc }, "Paid for by Friends of Jimmy Lima for City Council, District 5.", /* @__PURE__ */ import_react.default.createElement("br", null), "FPPC ID #0000000.")), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footNav }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement("button", { key: p, onClick: () => go(p), style: S.footLink }, p))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footSocial }, /* @__PURE__ */ import_react.default.createElement("span", { style: S.footHead }, "Follow"), ["Facebook", "Instagram", "X"].map((s) => /* @__PURE__ */ import_react.default.createElement("a", { key: s, href: "#", style: S.footLink }, s)))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBottom }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " Friends of Jimmy Lima \xB7 West Covina, California")));
+      t.contribute
+    ), /* @__PURE__ */ import_react.default.createElement("div", { style: { position: "relative", marginLeft: 8 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        style: S.langBtn,
+        onClick: () => setLangOpen((o) => !o),
+        "aria-label": "Change language"
+      },
+      t.langLabel,
+      " \u25BE"
+    ), langOpen && /* @__PURE__ */ import_react.default.createElement("div", { style: S.langDropdown }, ["en", "es", "zh"].map((l) => /* @__PURE__ */ import_react.default.createElement(
+      "button",
+      {
+        key: l,
+        style: { ...S.langOption, ...lang === l ? S.langOptionActive : {} },
+        onClick: () => {
+          setLang(l);
+          setLangOpen(false);
+        }
+      },
+      l === "en" ? "\u{1F1FA}\u{1F1F8} English" : l === "es" ? "\u{1F1F2}\u{1F1FD} Espa\xF1ol" : "\u{1F1E8}\u{1F1F3} \u4E2D\u6587"
+    ))))))), /* @__PURE__ */ import_react.default.createElement("main", null, /* @__PURE__ */ import_react.default.createElement(Body, { go, lang })), /* @__PURE__ */ import_react.default.createElement("footer", { style: S.footer }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.footRow } }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBrand }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 28, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", null, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("p", { style: S.footDisc }, "Paid for by Friends of Jimmy Lima for City Council, District 5.", /* @__PURE__ */ import_react.default.createElement("br", null), "FPPC ID #0000000.")), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footNav }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement("button", { key: p, onClick: () => go(p), style: S.footLink }, p))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footSocial }, /* @__PURE__ */ import_react.default.createElement("span", { style: S.footHead }, "Follow"), ["Facebook", "Instagram", "X"].map((s) => /* @__PURE__ */ import_react.default.createElement("a", { key: s, href: "#", style: S.footLink }, s)))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBottom }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " Friends of Jimmy Lima \xB7 West Covina, California")));
   }
-  var import_react, DONATE_URL, C, PAGES, INVOLVE_OPTIONS, GLOBAL, S;
+  var import_react, DONATE_URL, C, PAGES, LANGS, INVOLVE_OPTIONS, GLOBAL, S;
   var init_a3b745_0ba7_4a83_bbd0_dca7d711b095 = __esm({
     "04a3b745-0ba7-4a83-bbd0-dca7d711b095.tsx"() {
       import_react = __toESM(require_react());
@@ -21808,6 +21816,41 @@
         line: "#D8E1EE"
       };
       PAGES = ["Home", "Meet Jimmy", "Blueprint", "Endorsements", "Get Involved", "Contact"];
+      LANGS = {
+        en: {
+          nav: { "Home": "Home", "Meet Jimmy": "Meet Jimmy", "Blueprint": "Blueprint", "Endorsements": "Endorsements", "Get Involved": "Get Involved", "Contact": "Contact" },
+          contribute: "Contribute",
+          eyebrow: "West Covina \xB7 District 5 \xB7 Est. 1923",
+          tag1: "Leadership that Listens.",
+          tag2: "Putting Residents First.",
+          bio: "For more than 25 years, I've dedicated my career to serving families, solving problems, and helping people succeed. I'm running for City Council because I believe West Covina deserves honest leadership, responsible priorities, and a government that always puts residents first.",
+          btn1: "Get Involved",
+          btn2: "Meet Jimmy",
+          langLabel: "EN"
+        },
+        es: {
+          nav: { "Home": "Inicio", "Meet Jimmy": "Conoce a Jimmy", "Blueprint": "Plan de Acci\xF3n", "Endorsements": "Respaldos", "Get Involved": "Invol\xFAcrate", "Contact": "Contacto" },
+          contribute: "Contribuir",
+          eyebrow: "West Covina \xB7 Distrito 5 \xB7 Est. 1923",
+          tag1: "Liderazgo que Escucha.",
+          tag2: "Poniendo a los Residentes Primero.",
+          bio: "Por m\xE1s de 25 a\xF1os, he dedicado mi carrera a servir a las familias, resolver problemas y ayudar a las personas a salir adelante. Me postulo al Concejo Municipal porque creo que West Covina merece un liderazgo honesto, prioridades responsables y un gobierno que siempre ponga a los residentes primero.",
+          btn1: "Invol\xFAcrate",
+          btn2: "Conoce a Jimmy",
+          langLabel: "ES"
+        },
+        zh: {
+          nav: { "Home": "\u9996\u9875", "Meet Jimmy": "\u4E86\u89E3\u5409\u7C73", "Blueprint": "\u884C\u52A8\u8BA1\u5212", "Endorsements": "\u652F\u6301\u8005", "Get Involved": "\u53C2\u4E0E\u5176\u4E2D", "Contact": "\u8054\u7CFB\u6211\u4EEC" },
+          contribute: "\u6350\u6B3E\u652F\u6301",
+          eyebrow: "\u897F\u79D1\u7EF4\u7EB3 \xB7 \u7B2C5\u533A \xB7 \u5EFA\u4E8E1923\u5E74",
+          tag1: "\u503E\u542C\u6C11\u58F0\u7684\u9886\u5BFC\u529B\u3002",
+          tag2: "\u4EE5\u5C45\u6C11\u4E3A\u5148\u3002",
+          bio: "25\u5E74\u6765\uFF0C\u6211\u59CB\u7EC8\u81F4\u529B\u4E8E\u670D\u52A1\u5BB6\u5EAD\u3001\u89E3\u51B3\u95EE\u9898\u3001\u5E2E\u52A9\u6C11\u4F17\u8D70\u5411\u6210\u529F\u3002\u6211\u53C2\u9009\u5E02\u8BAE\u4F1A\uFF0C\u662F\u56E0\u4E3A\u6211\u76F8\u4FE1\u897F\u79D1\u7EF4\u7EB3\u503C\u5F97\u62E5\u6709\u8BDA\u5B9E\u7684\u9886\u5BFC\u3001\u8D1F\u8D23\u4EFB\u7684\u65BD\u653F\uFF0C\u4EE5\u53CA\u4E00\u4E2A\u6C38\u8FDC\u5C06\u5C45\u6C11\u653E\u5728\u9996\u4F4D\u7684\u653F\u5E9C\u3002",
+          btn1: "\u53C2\u4E0E\u5176\u4E2D",
+          btn2: "\u4E86\u89E3\u5409\u7C73",
+          langLabel: "\u4E2D\u6587"
+        }
+      };
       INVOLVE_OPTIONS = [
         "Knock on doors",
         "Make phone calls",
@@ -21827,16 +21870,8 @@
     outline: 3px solid ${C.sky}; outline-offset: 2px;
   }
 
-  /* --- Waffle button --- */
-  .wc-waffle { transition: background .2s ease, transform .2s ease; }
-  .wc-waffle:hover { background: rgba(242,183,5,0.25) !important; transform: scale(1.05); }
-
-  /* --- Overlay menu --- */
-  @keyframes wcFade { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes wcItem { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-  .wc-overlay { animation: wcFade .28s ease forwards; }
-  .wc-overlay-item { opacity: 0; animation: wcItem .5s cubic-bezier(.2,.7,.2,1) forwards; }
-  .wc-overlay-item:hover { color: #fff !important; background: rgba(255,255,255,0.06); }
+  /* --- Inline nav links --- */
+  .wc-navlink:hover { color: #fff !important; background: rgba(255,255,255,0.08) !important; }
 
   /* --- Ken Burns drift on hero photo --- */
   @keyframes wcKen { 0% { transform: scale(1.0) translate(0,0); } 100% { transform: scale(1.03) translate(-0.5%, -0.5%); } }
@@ -21872,9 +21907,9 @@
 
   @media (prefers-reduced-motion: reduce) {
     * { scroll-behavior: auto !important; }
-    .wc-load, .wc-reveal, .wc-overlay-item { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
+    .wc-load, .wc-reveal { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
     .wc-spin, .wc-mist, .wc-kenburns { animation: none !important; }
-    .wc-card:hover, .wc-btn:hover, .wc-waffle:hover { transform: none !important; }
+    .wc-card:hover, .wc-btn:hover { transform: none !important; }
   }
 `;
       S = {
@@ -21886,17 +21921,14 @@
         brand: { display: "flex", alignItems: "center", gap: 10, color: "#fff" },
         brandText: { fontSize: 22, letterSpacing: 0.5, fontWeight: 400 },
         // waffle menu button (3x3 grid)
-        waffle: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 4, padding: 9, borderRadius: 12, background: "rgba(255,255,255,0.10)" },
-        waffleDot: { width: 6, height: 6, borderRadius: 2, background: "#fff", display: "block" },
+        navLink: { color: "rgba(255,255,255,0.82)", fontSize: 13, fontWeight: 600, letterSpacing: 0.3, padding: "6px 10px", borderRadius: 6, whiteSpace: "nowrap", transition: "color .15s, background .15s" },
+        navLinkActive: { color: C.gold },
+        navContribute: { marginLeft: 6, background: C.gold, color: C.navy, fontSize: 13, fontWeight: 700, padding: "7px 14px", borderRadius: 999, textDecoration: "none", whiteSpace: "nowrap" },
+        langBtn: { marginLeft: 4, background: "rgba(255,255,255,0.12)", color: "#fff", fontSize: 13, fontWeight: 700, padding: "7px 12px", borderRadius: 8, letterSpacing: 0.5, whiteSpace: "nowrap" },
+        langDropdown: { position: "absolute", top: "calc(100% + 8px)", right: 0, background: C.navy, border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, overflow: "hidden", zIndex: 200, minWidth: 150, boxShadow: "0 8px 24px rgba(0,0,0,0.35)" },
+        langOption: { display: "block", width: "100%", textAlign: "left", color: "#e7eefa", fontSize: 14, fontWeight: 500, padding: "10px 16px" },
+        langOptionActive: { background: "rgba(242,183,5,0.18)", color: C.gold },
         // full-screen overlay nav
-        overlay: { position: "fixed", inset: 0, zIndex: 100, background: `linear-gradient(150deg, ${C.navy} 0%, #0a2348 60%, #0c2f5c 100%)`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", overflow: "hidden" },
-        overlayClose: { position: "absolute", top: 22, right: 28, fontSize: 44, lineHeight: 1, color: "#fff", width: 56, height: 56, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" },
-        overlayRing: { position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none" },
-        overlayNav: { display: "flex", flexDirection: "column", gap: 4, position: "relative", zIndex: 2 },
-        overlayItem: { display: "flex", alignItems: "baseline", gap: 18, color: "#e7eefa", fontSize: "clamp(30px, 6vw, 54px)", fontWeight: 800, letterSpacing: -1, padding: "6px 12px", textDecoration: "none", borderRadius: 12, textAlign: "left" },
-        overlayActive: { color: C.gold },
-        overlayNum: { fontSize: 16, fontWeight: 800, color: C.amber, letterSpacing: 1, minWidth: 28 },
-        overlayDonate: { marginTop: 18, background: C.gold, color: C.navy, paddingLeft: 22, paddingRight: 28 },
         // hero
         hero: { position: "relative", background: C.navy, color: "#fff", overflow: "hidden" },
         heroRing: { position: "absolute", right: -60, top: -40, pointerEvents: "none", zIndex: 2 },
