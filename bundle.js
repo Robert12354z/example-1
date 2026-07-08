@@ -21461,10 +21461,10 @@
     }
   });
 
-  // jimmy-hero-new.jpg
-  var require_jimmy_hero_new = __commonJS({
-    "jimmy-hero-new.jpg"(exports, module) {
-      module.exports = "./jimmy-hero-new-APLRUZ37.jpg";
+  // jimmy-hero2.png
+  var require_jimmy_hero2 = __commonJS({
+    "jimmy-hero2.png"(exports, module) {
+      module.exports = "./jimmy-hero2-QBXQP5JN.png";
     }
   });
 
@@ -21588,7 +21588,7 @@
     const [cutout, setCutout] = import_react.default.useState(null);
     import_react.default.useEffect(() => {
       const img = new Image();
-      img.src = require_jimmy_hero_new();
+      img.src = require_jimmy_hero2();
       img.onload = () => {
         const canvas = document.createElement("canvas");
         canvas.width = img.width;
@@ -21600,10 +21600,10 @@
         for (let i = 0; i < d.length; i += 4) {
           const r = d[i], g = d[i + 1], b = d[i + 2];
           const brightness = (r + g + b) / 3;
-          if (brightness > 238) {
+          if (brightness < 18) {
             d[i + 3] = 0;
-          } else if (brightness > 210) {
-            d[i + 3] = Math.round((238 - brightness) / 28 * 255);
+          } else if (brightness < 48) {
+            d[i + 3] = Math.round((brightness - 18) / 30 * 255);
           }
         }
         ctx.putImageData(imgData, 0, 0);
