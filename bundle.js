@@ -21681,7 +21681,7 @@
       }
     ), opt)))), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: S.btnPrimary }, t.volunteerSubmit)));
   }
-  function Contact({ lang }) {
+  function Contact({ go, lang }) {
     const t = LANGS[lang];
     const [done, setDone] = (0, import_react.useState)(false);
     const [vals, setVals] = (0, import_react.useState)({ name: "", email: "", message: "" });
@@ -21695,7 +21695,7 @@
       setErr("");
       setDone(true);
     };
-    return /* @__PURE__ */ import_react.default.createElement(PageShell, { title: t.contactTitle, kicker: t.contactKicker }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.split }, /* @__PURE__ */ import_react.default.createElement("div", null, done ? /* @__PURE__ */ import_react.default.createElement("p", { style: S.body }, t.contactDone) : /* @__PURE__ */ import_react.default.createElement("form", { onSubmit: submit, style: S.form, noValidate: true }, /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelName }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, value: vals.name, onChange: (e) => setVals({ ...vals, name: e.target.value }), placeholder: "Your name" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelEmail }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, type: "email", value: vals.email, onChange: (e) => setVals({ ...vals, email: e.target.value }), placeholder: "you@email.com" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelMessage }, /* @__PURE__ */ import_react.default.createElement("textarea", { style: { ...S.input, minHeight: 120, resize: "vertical" }, value: vals.message, onChange: (e) => setVals({ ...vals, message: e.target.value }), placeholder: t.contactPHMessage })), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: S.btnPrimary }, t.contactSubmit))), /* @__PURE__ */ import_react.default.createElement("aside", { style: S.contactAside }, /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactHQTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactHQBody.split("\n").map((line, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i }, line, /* @__PURE__ */ import_react.default.createElement("br", null)))), /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactSupportTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactSupportBody), /* @__PURE__ */ import_react.default.createElement("a", { href: DONATE_URL, style: S.btnGold, target: "_blank", rel: "noopener noreferrer" }, t.contribute))));
+    return /* @__PURE__ */ import_react.default.createElement(PageShell, { title: t.contactTitle, kicker: t.contactKicker }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.split }, /* @__PURE__ */ import_react.default.createElement("div", null, done ? /* @__PURE__ */ import_react.default.createElement("p", { style: S.body }, t.contactDone) : /* @__PURE__ */ import_react.default.createElement("form", { onSubmit: submit, style: S.form, noValidate: true }, /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelName }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, value: vals.name, onChange: (e) => setVals({ ...vals, name: e.target.value }), placeholder: "Your name" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelEmail }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, type: "email", value: vals.email, onChange: (e) => setVals({ ...vals, email: e.target.value }), placeholder: "you@email.com" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelMessage }, /* @__PURE__ */ import_react.default.createElement("textarea", { style: { ...S.input, minHeight: 120, resize: "vertical" }, value: vals.message, onChange: (e) => setVals({ ...vals, message: e.target.value }), placeholder: t.contactPHMessage })), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: S.btnPrimary }, t.contactSubmit))), /* @__PURE__ */ import_react.default.createElement("aside", { style: S.contactAside }, /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactHQTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactHQBody.split("\n").map((line, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i }, line, /* @__PURE__ */ import_react.default.createElement("br", null)))), /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactSupportTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactSupportBody), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGold, onClick: () => go("Donate") }, t.contribute))));
   }
   function PageShell({ title, kicker, children }) {
     return /* @__PURE__ */ import_react.default.createElement("section", { style: { ...S.section, background: "#fff", minHeight: "70vh" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pageHead }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.kicker }, kicker), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.pageTitle }, title), /* @__PURE__ */ import_react.default.createElement("div", { style: S.pageRule })), children));
@@ -21705,7 +21705,10 @@
   }
   function CtaBand({ go, lang }) {
     const t = LANGS[lang];
-    return /* @__PURE__ */ import_react.default.createElement("section", { style: S.ctaBand }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, textAlign: "center" } }, /* @__PURE__ */ import_react.default.createElement("h2", { style: { ...S.ctaH, marginBottom: 32 } }, t.ctaH), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroCtas, justifyContent: "center", marginBottom: 28 } }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGold, onClick: () => go("Get Involved") }, t.ctaGetInvolved), /* @__PURE__ */ import_react.default.createElement("a", { href: DONATE_URL, style: S.btnGhostLight, target: "_blank", rel: "noopener noreferrer" }, t.contribute)), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.ctaP, margin: 0 } }, t.ctaBody)));
+    return /* @__PURE__ */ import_react.default.createElement("section", { style: S.ctaBand }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, textAlign: "center" } }, /* @__PURE__ */ import_react.default.createElement("h2", { style: { ...S.ctaH, marginBottom: 32 } }, t.ctaH), /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.heroCtas, justifyContent: "center", marginBottom: 28 } }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGold, onClick: () => go("Get Involved") }, t.ctaGetInvolved), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGhostLight, onClick: () => go("Donate") }, t.contribute)), /* @__PURE__ */ import_react.default.createElement("p", { style: { ...S.ctaP, margin: 0 } }, t.ctaBody)));
+  }
+  function Donate() {
+    return /* @__PURE__ */ import_react.default.createElement("section", { style: { minHeight: "70vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "#f4f6fa", textAlign: "center", padding: "80px 24px" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { fontSize: 56, marginBottom: 24 } }, "\u{1F3D7}\uFE0F"), /* @__PURE__ */ import_react.default.createElement("h1", { style: { fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: C.navy, marginBottom: 16, lineHeight: 1.1 } }, "We're Building This Page"), /* @__PURE__ */ import_react.default.createElement("p", { style: { fontSize: 18, color: "#4a5568", maxWidth: 480, lineHeight: 1.7, marginBottom: 0 } }, "Our donation page will be live soon. Please check back in a moment \u2014 we appreciate your patience and support!"), /* @__PURE__ */ import_react.default.createElement("div", { style: { marginTop: 32, width: 64, height: 4, borderRadius: 2, background: C.gold } }));
   }
   function App() {
     const [page, setPage] = (0, import_react.useState)("Home");
@@ -21730,7 +21733,7 @@
       return () => window.removeEventListener("click", close);
     }, []);
     const t = LANGS[lang];
-    const Body = { Home, "Meet Jimmy": About, Blueprint: Issues, Endorsements, "Get Involved": Volunteer, Contact }[page];
+    const Body = { Home, "Meet Jimmy": About, Blueprint: Issues, Endorsements, "Get Involved": Volunteer, Contact, Donate }[page];
     return /* @__PURE__ */ import_react.default.createElement("div", { style: S.root, dir: lang === "ar" ? "rtl" : "ltr" }, /* @__PURE__ */ import_react.default.createElement("style", null, GLOBAL), /* @__PURE__ */ import_react.default.createElement("header", { style: S.header }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.headRow } }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.brand, onClick: () => go("Home") }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 34, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", { style: S.brandText }, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("nav", { style: { display: "flex", alignItems: "center", gap: 8 } }, /* @__PURE__ */ import_react.default.createElement("div", { style: { position: "relative" }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react.default.createElement("button", { style: S.waffleBtn, onClick: () => setMenuOpen((o) => !o), "aria-label": "Menu" }, /* @__PURE__ */ import_react.default.createElement("svg", { width: "20", height: "20", viewBox: "0 0 20 20", fill: "currentColor" }, [0, 1, 2].flatMap((r) => [0, 1, 2].map((c) => /* @__PURE__ */ import_react.default.createElement("circle", { key: `${r}-${c}`, cx: 3 + c * 7, cy: 3 + r * 7, r: 1.6 }))))), menuOpen && /* @__PURE__ */ import_react.default.createElement("div", { style: S.menuDropdown }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement(
       "button",
       {
@@ -21739,16 +21742,14 @@
         style: { ...S.menuItem, ...page === p ? S.menuItemActive : {} }
       },
       t.nav[p]
-    )))), /* @__PURE__ */ import_react.default.createElement(
-      "a",
+    )), /* @__PURE__ */ import_react.default.createElement("div", { style: { borderTop: "1px solid rgba(255,255,255,0.1)", margin: "4px 0" } }), /* @__PURE__ */ import_react.default.createElement(
+      "button",
       {
-        href: DONATE_URL,
-        target: "_blank",
-        rel: "noopener noreferrer",
-        style: S.navContribute
+        onClick: () => go("Donate"),
+        style: { ...S.menuItem, color: C.gold, fontWeight: 700 }
       },
       t.contribute
-    ), /* @__PURE__ */ import_react.default.createElement("div", { style: { position: "relative", marginLeft: 4 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react.default.createElement(
+    ))), /* @__PURE__ */ import_react.default.createElement("div", { style: { position: "relative", marginLeft: 4 }, onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ import_react.default.createElement(
       "button",
       {
         style: S.langBtn,
@@ -21770,11 +21771,10 @@
       { en: "\u{1F1FA}\u{1F1F8} English", es: "\u{1F1F2}\u{1F1FD} Espa\xF1ol", zh: "\u{1F1E8}\u{1F1F3} \u4E2D\u6587", vi: "\u{1F1FB}\u{1F1F3} Ti\u1EBFng Vi\u1EC7t", tl: "\u{1F1F5}\u{1F1ED} Tagalog", hi: "\u{1F1EE}\u{1F1F3} \u0939\u093F\u0902\u0926\u0940", ko: "\u{1F1F0}\u{1F1F7} \uD55C\uAD6D\uC5B4", ja: "\u{1F1EF}\u{1F1F5} \u65E5\u672C\u8A9E", de: "\u{1F1E9}\u{1F1EA} Deutsch", fr: "\u{1F1EB}\u{1F1F7} Fran\xE7ais", el: "\u{1F1EC}\u{1F1F7} \u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03AC", it: "\u{1F1EE}\u{1F1F9} Italiano", ar: "\u{1F1F8}\u{1F1E6} \u0627\u0644\u0639\u0631\u0628\u064A\u0629" }[l]
     ))))))), /* @__PURE__ */ import_react.default.createElement("main", { key: page, className: "wc-page-enter" }, /* @__PURE__ */ import_react.default.createElement(Body, { go, lang })), /* @__PURE__ */ import_react.default.createElement("footer", { style: S.footer }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.footRow } }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBrand }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 28, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", null, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("p", { style: S.footDisc }, t.footerDisc)), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footNav }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement("button", { key: p, onClick: () => go(p), style: S.footLink }, t.nav[p]))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footSocial }, /* @__PURE__ */ import_react.default.createElement("span", { style: S.footHead }, "Follow"), t.footerSocial.map((s) => /* @__PURE__ */ import_react.default.createElement("a", { key: s, href: "#", style: S.footLink }, s)))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBottom }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " Friends of Jimmy Lima \xB7 West Covina, California")));
   }
-  var import_react, DONATE_URL, C, PAGES, LANGS, PDF_URLS, BLUEPRINT_ICONS, GLOBAL, S;
+  var import_react, C, PAGES, LANGS, PDF_URLS, BLUEPRINT_ICONS, GLOBAL, S;
   var init_a3b745_0ba7_4a83_bbd0_dca7d711b095 = __esm({
     "04a3b745-0ba7-4a83-bbd0-dca7d711b095.tsx"() {
       import_react = __toESM(require_react());
-      DONATE_URL = "#";
       C = {
         navy: "#0B2E5C",
         sky: "#2E78C7",
