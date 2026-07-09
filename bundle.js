@@ -21652,6 +21652,7 @@
   function Volunteer({ lang }) {
     const t = LANGS[lang];
     const [done, setDone] = (0, import_react.useState)(false);
+    const [sending, setSending] = (0, import_react.useState)(false);
     const [vals, setVals] = (0, import_react.useState)({ name: "", email: "", phone: "", interests: [] });
     const [err, setErr] = (0, import_react.useState)("");
     const toggleInterest = (opt) => {
@@ -21660,14 +21661,35 @@
         interests: v.interests.includes(opt) ? v.interests.filter((x) => x !== opt) : [...v.interests, opt]
       }));
     };
-    const submit = (e) => {
+    const submit = async (e) => {
       e.preventDefault();
       if (!vals.name.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(vals.email)) {
         setErr(t.volunteerErr);
         return;
       }
       setErr("");
-      setDone(true);
+      setSending(true);
+      try {
+        const res = await fetch(VOLUNTEER_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: vals.name,
+            email: vals.email,
+            phone: vals.phone || "(not provided)",
+            interests: vals.interests.length ? vals.interests.join(", ") : "None selected"
+          })
+        });
+        if (res.ok) {
+          setDone(true);
+        } else {
+          setErr("Something went wrong. Please try again.");
+        }
+      } catch {
+        setErr("Something went wrong. Please check your connection and try again.");
+      } finally {
+        setSending(false);
+      }
     };
     if (done)
       return /* @__PURE__ */ import_react.default.createElement(PageShell, { title: t.volunteerThanksTitle, kicker: t.volunteerKicker }, /* @__PURE__ */ import_react.default.createElement("p", { style: S.body }, t.volunteerThanksBody));
@@ -21679,23 +21701,44 @@
         onChange: () => toggleInterest(opt),
         style: { width: 18, height: 18, accentColor: "#1a3a5c", cursor: "pointer" }
       }
-    ), opt)))), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: S.btnPrimary }, t.volunteerSubmit)));
+    ), opt)))), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: { ...S.btnPrimary, opacity: sending ? 0.7 : 1 }, disabled: sending }, sending ? "Sending\u2026" : t.volunteerSubmit)));
   }
   function Contact({ go, lang }) {
     const t = LANGS[lang];
     const [done, setDone] = (0, import_react.useState)(false);
+    const [sending, setSending] = (0, import_react.useState)(false);
     const [vals, setVals] = (0, import_react.useState)({ name: "", email: "", message: "" });
     const [err, setErr] = (0, import_react.useState)("");
-    const submit = (e) => {
+    const submit = async (e) => {
       e.preventDefault();
       if (!vals.name.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(vals.email) || !vals.message.trim()) {
         setErr(t.contactErr);
         return;
       }
       setErr("");
-      setDone(true);
+      setSending(true);
+      try {
+        const res = await fetch(CONTACT_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: vals.name,
+            email: vals.email,
+            message: vals.message
+          })
+        });
+        if (res.ok) {
+          setDone(true);
+        } else {
+          setErr("Something went wrong. Please try again.");
+        }
+      } catch {
+        setErr("Something went wrong. Please check your connection and try again.");
+      } finally {
+        setSending(false);
+      }
     };
-    return /* @__PURE__ */ import_react.default.createElement(PageShell, { title: t.contactTitle, kicker: t.contactKicker }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.split }, /* @__PURE__ */ import_react.default.createElement("div", null, done ? /* @__PURE__ */ import_react.default.createElement("p", { style: S.body }, t.contactDone) : /* @__PURE__ */ import_react.default.createElement("form", { onSubmit: submit, style: S.form, noValidate: true }, /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelName }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, value: vals.name, onChange: (e) => setVals({ ...vals, name: e.target.value }), placeholder: "Your name" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelEmail }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, type: "email", value: vals.email, onChange: (e) => setVals({ ...vals, email: e.target.value }), placeholder: "you@email.com" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelMessage }, /* @__PURE__ */ import_react.default.createElement("textarea", { style: { ...S.input, minHeight: 120, resize: "vertical" }, value: vals.message, onChange: (e) => setVals({ ...vals, message: e.target.value }), placeholder: t.contactPHMessage })), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: S.btnPrimary }, t.contactSubmit))), /* @__PURE__ */ import_react.default.createElement("aside", { style: S.contactAside }, /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactHQTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactHQBody.split("\n").map((line, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i }, line, /* @__PURE__ */ import_react.default.createElement("br", null)))), /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactSupportTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactSupportBody), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGold, onClick: () => go("Donate") }, t.contribute))));
+    return /* @__PURE__ */ import_react.default.createElement(PageShell, { title: t.contactTitle, kicker: t.contactKicker }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.split }, /* @__PURE__ */ import_react.default.createElement("div", null, done ? /* @__PURE__ */ import_react.default.createElement("p", { style: S.body }, t.contactDone) : /* @__PURE__ */ import_react.default.createElement("form", { onSubmit: submit, style: S.form, noValidate: true }, /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelName }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, value: vals.name, onChange: (e) => setVals({ ...vals, name: e.target.value }), placeholder: "Your name" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelEmail }, /* @__PURE__ */ import_react.default.createElement("input", { style: S.input, type: "email", value: vals.email, onChange: (e) => setVals({ ...vals, email: e.target.value }), placeholder: "you@email.com" })), /* @__PURE__ */ import_react.default.createElement(Field, { label: t.contactLabelMessage }, /* @__PURE__ */ import_react.default.createElement("textarea", { style: { ...S.input, minHeight: 120, resize: "vertical" }, value: vals.message, onChange: (e) => setVals({ ...vals, message: e.target.value }), placeholder: t.contactPHMessage })), err && /* @__PURE__ */ import_react.default.createElement("div", { style: S.err }, err), /* @__PURE__ */ import_react.default.createElement("button", { type: "submit", style: { ...S.btnPrimary, opacity: sending ? 0.7 : 1 }, disabled: sending }, sending ? "Sending\u2026" : t.contactSubmit))), /* @__PURE__ */ import_react.default.createElement("aside", { style: S.contactAside }, /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactHQTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactHQBody.split("\n").map((line, i) => /* @__PURE__ */ import_react.default.createElement("span", { key: i }, line, /* @__PURE__ */ import_react.default.createElement("br", null)))), /* @__PURE__ */ import_react.default.createElement("h3", { style: S.asideH }, t.contactSupportTitle), /* @__PURE__ */ import_react.default.createElement("p", { style: S.asideP }, t.contactSupportBody), /* @__PURE__ */ import_react.default.createElement("button", { style: S.btnGold, onClick: () => go("Donate") }, t.contribute))));
   }
   function PageShell({ title, kicker, children }) {
     return /* @__PURE__ */ import_react.default.createElement("section", { style: { ...S.section, background: "#fff", minHeight: "70vh" } }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.wrap }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.pageHead }, /* @__PURE__ */ import_react.default.createElement("div", { style: S.kicker }, kicker), /* @__PURE__ */ import_react.default.createElement("h1", { style: S.pageTitle }, title), /* @__PURE__ */ import_react.default.createElement("div", { style: S.pageRule })), children));
@@ -21774,10 +21817,12 @@
       return /* @__PURE__ */ import_react.default.createElement("a", { key: s, href: url, target: "_blank", rel: "noopener noreferrer", style: S.footLink }, s);
     }))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBottom }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " Friends of Jimmy Lima \xB7 West Covina, California")));
   }
-  var import_react, C, PAGES, LANGS, PDF_URLS, BLUEPRINT_ICONS, GLOBAL, S;
+  var import_react, VOLUNTEER_ENDPOINT, CONTACT_ENDPOINT, C, PAGES, LANGS, PDF_URLS, BLUEPRINT_ICONS, GLOBAL, S;
   var init_a3b745_0ba7_4a83_bbd0_dca7d711b095 = __esm({
     "04a3b745-0ba7-4a83-bbd0-dca7d711b095.tsx"() {
       import_react = __toESM(require_react());
+      VOLUNTEER_ENDPOINT = "";
+      CONTACT_ENDPOINT = "";
       C = {
         navy: "#0B2E5C",
         sky: "#2E78C7",
