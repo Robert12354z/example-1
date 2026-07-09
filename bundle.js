@@ -21821,8 +21821,8 @@
   var init_a3b745_0ba7_4a83_bbd0_dca7d711b095 = __esm({
     "04a3b745-0ba7-4a83-bbd0-dca7d711b095.tsx"() {
       import_react = __toESM(require_react());
-      VOLUNTEER_ENDPOINT = "";
-      CONTACT_ENDPOINT = "";
+      VOLUNTEER_ENDPOINT = "https://formspree.io/f/mwvdgpky";
+      CONTACT_ENDPOINT = "https://formspree.io/f/xbdvnlje";
       C = {
         navy: "#0B2E5C",
         sky: "#2E78C7",
