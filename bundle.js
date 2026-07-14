@@ -21813,7 +21813,7 @@
       },
       { en: "\u{1F1FA}\u{1F1F8} English", es: "\u{1F1F2}\u{1F1FD} Espa\xF1ol", zh: "\u{1F1E8}\u{1F1F3} \u4E2D\u6587", vi: "\u{1F1FB}\u{1F1F3} Ti\u1EBFng Vi\u1EC7t", tl: "\u{1F1F5}\u{1F1ED} Tagalog", hi: "\u{1F1EE}\u{1F1F3} \u0939\u093F\u0902\u0926\u0940", ko: "\u{1F1F0}\u{1F1F7} \uD55C\uAD6D\uC5B4", ja: "\u{1F1EF}\u{1F1F5} \u65E5\u672C\u8A9E", de: "\u{1F1E9}\u{1F1EA} Deutsch", fr: "\u{1F1EB}\u{1F1F7} Fran\xE7ais", el: "\u{1F1EC}\u{1F1F7} \u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03AC", it: "\u{1F1EE}\u{1F1F9} Italiano", ar: "\u{1F1F8}\u{1F1E6} \u0627\u0644\u0639\u0631\u0628\u064A\u0629" }[l]
     ))))))), /* @__PURE__ */ import_react.default.createElement("main", { key: page, className: "wc-page-enter" }, /* @__PURE__ */ import_react.default.createElement(Body, { go, lang })), /* @__PURE__ */ import_react.default.createElement("footer", { style: S.footer }, /* @__PURE__ */ import_react.default.createElement("div", { style: { ...S.wrap, ...S.footRow } }, /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBrand }, /* @__PURE__ */ import_react.default.createElement(StarRing, { size: 28, stars: 10 }), /* @__PURE__ */ import_react.default.createElement("span", null, "Jimmy ", /* @__PURE__ */ import_react.default.createElement("strong", null, "Lima"))), /* @__PURE__ */ import_react.default.createElement("p", { style: S.footDisc }, t.footerDisc)), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footNav }, PAGES.map((p) => /* @__PURE__ */ import_react.default.createElement("button", { key: p, onClick: () => go(p), style: S.footLink }, t.nav[p]))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footSocial }, /* @__PURE__ */ import_react.default.createElement("span", { style: S.footHead }, "Follow"), t.footerSocial.map((s) => {
-      const url = s.toLowerCase().includes("facebook") ? "https://www.facebook.com/profile.php?id=61591947743559" : s.toLowerCase().includes("instagram") ? "https://www.instagram.com/votejimmylima/" : "#";
+      const url = s.toLowerCase().includes("facebook") ? "https://www.facebook.com/profile.php?id=61591947743559" : s.toLowerCase().includes("instagram") ? "https://www.instagram.com/votejimmylima/" : s.toLowerCase().includes("tiktok") ? "https://www.tiktok.com/@votejimmylima" : "#";
       return /* @__PURE__ */ import_react.default.createElement("a", { key: s, href: url, target: "_blank", rel: "noopener noreferrer", style: S.footLink }, s);
     }))), /* @__PURE__ */ import_react.default.createElement("div", { style: S.footBottom }, "\xA9 ", (/* @__PURE__ */ new Date()).getFullYear(), " Friends of Jimmy Lima \xB7 West Covina, California")));
   }
@@ -21934,7 +21934,7 @@
           contactSupportBody: "Every contribution helps us reach more neighbors in District 5.",
           // Footer
           footerDisc: "Paid for by Friends of Jimmy Lima for City Council, District 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         es: {
           nav: { "Home": "Inicio", "Meet Jimmy": "Conoce a Jimmy", "Blueprint": "Plan de Acci\xF3n", "Endorsements": "Respaldos", "Get Involved": "Invol\xFAcrate", "Contact": "Contacto" },
@@ -22026,7 +22026,7 @@
           contactSupportTitle: "Apoya la campa\xF1a",
           contactSupportBody: "Cada contribuci\xF3n nos ayuda a llegar a m\xE1s vecinos del Distrito 5.",
           footerDisc: "Pagado por Amigos de Jimmy Lima para el Concejo Municipal, Distrito 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         zh: {
           nav: { "Home": "\u9996\u9875", "Meet Jimmy": "\u4E86\u89E3\u5409\u7C73", "Blueprint": "\u884C\u52A8\u8BA1\u5212", "Endorsements": "\u652F\u6301\u8005", "Get Involved": "\u53C2\u4E0E\u5176\u4E2D", "Contact": "\u8054\u7CFB\u6211\u4EEC" },
@@ -22118,7 +22118,7 @@
           contactSupportTitle: "\u652F\u6301\u7ADE\u9009",
           contactSupportBody: "\u6BCF\u4E00\u4EFD\u6350\u6B3E\u90FD\u5E2E\u52A9\u6211\u4EEC\u8054\u7CFB\u7B2C5\u533A\u66F4\u591A\u7684\u90BB\u5C45\u3002",
           footerDisc: "\u7531\u5409\u7C73\xB7\u5229\u9A6C\u7B2C5\u533A\u5E02\u8BAE\u4F1A\u4E4B\u53CB\u652F\u4ED8\u3002FPPC ID: Pending\u3002",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         vi: {
           nav: { "Home": "Trang Ch\u1EE7", "Meet Jimmy": "G\u1EB7p Jimmy", "Blueprint": "K\u1EBF Ho\u1EA1ch", "Endorsements": "\u1EE6ng H\u1ED9", "Get Involved": "Tham Gia", "Contact": "Li\xEAn H\u1EC7" },
@@ -22192,7 +22192,7 @@
           contactSupportTitle: "H\u1ED7 Tr\u1EE3 Chi\u1EBFn D\u1ECBch",
           contactSupportBody: "M\u1ED7i kho\u1EA3n \u0111\xF3ng g\xF3p gi\xFAp ch\xFAng t\xF4i ti\u1EBFp c\u1EADn nhi\u1EC1u c\u01B0 d\xE2n h\u01A1n.",
           footerDisc: "\u0110\u01B0\u1EE3c tr\u1EA3 b\u1EDFi B\u1EA1n B\xE8 c\u1EE7a Jimmy Lima cho H\u1ED9i \u0110\u1ED3ng Th\xE0nh Ph\u1ED1 Khu V\u1EF1c 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         tl: {
           nav: { "Home": "Tahanan", "Meet Jimmy": "Makilala si Jimmy", "Blueprint": "Plano", "Endorsements": "Mga Suporta", "Get Involved": "Makisali", "Contact": "Makipag-ugnayan" },
@@ -22266,7 +22266,7 @@
           contactSupportTitle: "Suportahan ang Kampanya",
           contactSupportBody: "Ang bawat donasyon ay tumutulong sa amin na maabot ang mas maraming kapitbahay sa Distrito 5.",
           footerDisc: "Binayaran ng Mga Kaibigan ni Jimmy Lima para sa Konseho ng Lungsod ng Distrito 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         hi: {
           nav: { "Home": "\u0939\u094B\u092E", "Meet Jimmy": "\u091C\u093F\u092E\u0940 \u0938\u0947 \u092E\u093F\u0932\u0947\u0902", "Blueprint": "\u092C\u094D\u0932\u0942\u092A\u094D\u0930\u093F\u0902\u091F", "Endorsements": "\u0938\u092E\u0930\u094D\u0925\u0928", "Get Involved": "\u091C\u0941\u0921\u093C\u0947\u0902", "Contact": "\u0938\u0902\u092A\u0930\u094D\u0915" },
@@ -22340,7 +22340,7 @@
           contactSupportTitle: "\u0905\u092D\u093F\u092F\u093E\u0928 \u0915\u093E \u0938\u092E\u0930\u094D\u0925\u0928 \u0915\u0930\u0947\u0902",
           contactSupportBody: "\u0939\u0930 \u0926\u093E\u0928 \u0939\u092E\u0947\u0902 \u091C\u093F\u0932\u093E 5 \u092E\u0947\u0902 \u0905\u0927\u093F\u0915 \u092A\u0921\u093C\u094B\u0938\u093F\u092F\u094B\u0902 \u0924\u0915 \u092A\u0939\u0941\u0902\u091A\u0928\u0947 \u092E\u0947\u0902 \u092E\u0926\u0926 \u0915\u0930\u0924\u093E \u0939\u0948\u0964",
           footerDisc: "\u091C\u093F\u092E\u0940 \u0932\u0940\u092E\u093E \u092B\u0949\u0930 \u0938\u093F\u091F\u0940 \u0915\u093E\u0909\u0902\u0938\u093F\u0932 \u091C\u093F\u0932\u093E 5 \u0915\u0947 \u092E\u093F\u0924\u094D\u0930\u094B\u0902 \u0926\u094D\u0935\u093E\u0930\u093E \u092D\u0941\u0917\u0924\u093E\u0928 \u0915\u093F\u092F\u093E \u0917\u092F\u093E\u0964 FPPC ID: Pending\u0964",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         ko: {
           nav: { "Home": "\uD648", "Meet Jimmy": "\uC9C0\uBBF8 \uC18C\uAC1C", "Blueprint": "\uCCAD\uC0AC\uC9C4", "Endorsements": "\uC9C0\uC9C0", "Get Involved": "\uCC38\uC5EC\uD558\uAE30", "Contact": "\uC5F0\uB77D\uCC98" },
@@ -22414,7 +22414,7 @@
           contactSupportTitle: "\uCEA0\uD398\uC778 \uC9C0\uC6D0",
           contactSupportBody: "\uBAA8\uB4E0 \uAE30\uBD80\uAE08\uC740 \uC800\uD76C\uAC00 5\uAD6C\uC5ED\uC758 \uB354 \uB9CE\uC740 \uC774\uC6C3\uC5D0\uAC8C \uB2E4\uAC00\uAC00\uB294 \uB370 \uB3C4\uC6C0\uC774 \uB429\uB2C8\uB2E4.",
           footerDisc: "5\uAD6C\uC5ED \uC2DC\uC758\uD68C\uB97C \uC704\uD55C \uC9C0\uBBF8 \uB9AC\uB9C8\uC758 \uCE5C\uAD6C\uB4E4\uC774 \uC9C0\uBD88. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         ja: {
           nav: { "Home": "\u30DB\u30FC\u30E0", "Meet Jimmy": "\u30B8\u30DF\u30FC\u306B\u3064\u3044\u3066", "Blueprint": "\u30D6\u30EB\u30FC\u30D7\u30EA\u30F3\u30C8", "Endorsements": "\u652F\u6301", "Get Involved": "\u53C2\u52A0\u3059\u308B", "Contact": "\u304A\u554F\u3044\u5408\u308F\u305B" },
@@ -22488,7 +22488,7 @@
           contactSupportTitle: "\u30AD\u30E3\u30F3\u30DA\u30FC\u30F3\u3092\u652F\u63F4",
           contactSupportBody: "\u3059\u3079\u3066\u306E\u5BC4\u4ED8\u306F\u3001\u79C1\u305F\u3061\u304C\u7B2C5\u533A\u306E\u3088\u308A\u591A\u304F\u306E\u96A3\u4EBA\u306B\u5C4A\u304F\u306E\u306B\u5F79\u7ACB\u3061\u307E\u3059\u3002",
           footerDisc: "\u7B2C5\u533A\u5E02\u8B70\u4F1A\u306E\u305F\u3081\u306E\u30B8\u30DF\u30FC\u30FB\u30EA\u30DE\u306E\u53CB\u4EBA\u305F\u3061\u304C\u652F\u6255\u3044\u307E\u3057\u305F\u3002FPPC ID: Pending\u3002",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         de: {
           nav: { "Home": "Startseite", "Meet Jimmy": "Jimmy kennenlernen", "Blueprint": "Aktionsplan", "Endorsements": "Unterst\xFCtzung", "Get Involved": "Mitmachen", "Contact": "Kontakt" },
@@ -22562,7 +22562,7 @@
           contactSupportTitle: "Kampagne unterst\xFCtzen",
           contactSupportBody: "Jede Spende hilft uns, mehr Nachbarn in Bezirk 5 zu erreichen.",
           footerDisc: "Bezahlt von Freunde von Jimmy Lima f\xFCr Stadtrat Bezirk 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         fr: {
           nav: { "Home": "Accueil", "Meet Jimmy": "Rencontrer Jimmy", "Blueprint": "Plan d'action", "Endorsements": "Soutiens", "Get Involved": "S'impliquer", "Contact": "Contact" },
@@ -22636,7 +22636,7 @@
           contactSupportTitle: "Soutenir la campagne",
           contactSupportBody: "Chaque don nous aide \xE0 toucher plus de voisins dans le District 5.",
           footerDisc: "Pay\xE9 par les Amis de Jimmy Lima pour le Conseil Municipal District 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         el: {
           nav: { "Home": "\u0391\u03C1\u03C7\u03B9\u03BA\u03AE", "Meet Jimmy": "\u0393\u03BD\u03C9\u03C1\u03AF\u03C3\u03C4\u03B5 \u03C4\u03BF\u03BD \u03A4\u03B6\u03AF\u03BC\u03B9", "Blueprint": "\u03A3\u03C7\u03AD\u03B4\u03B9\u03BF \u0394\u03C1\u03AC\u03C3\u03B7\u03C2", "Endorsements": "\u03A5\u03C0\u03BF\u03C3\u03C4\u03AE\u03C1\u03B9\u03BE\u03B7", "Get Involved": "\u03A3\u03C5\u03BC\u03BC\u03B5\u03C4\u03BF\u03C7\u03AE", "Contact": "\u0395\u03C0\u03B9\u03BA\u03BF\u03B9\u03BD\u03C9\u03BD\u03AF\u03B1" },
@@ -22710,7 +22710,7 @@
           contactSupportTitle: "\u03A5\u03C0\u03BF\u03C3\u03C4\u03AE\u03C1\u03B9\u03BE\u03B7 \u0395\u03BA\u03C3\u03C4\u03C1\u03B1\u03C4\u03B5\u03AF\u03B1\u03C2",
           contactSupportBody: "\u039A\u03AC\u03B8\u03B5 \u03B4\u03C9\u03C1\u03B5\u03AC \u03BC\u03B1\u03C2 \u03B2\u03BF\u03B7\u03B8\u03AC \u03BD\u03B1 \u03C6\u03C4\u03AC\u03C3\u03BF\u03C5\u03BC\u03B5 \u03C3\u03B5 \u03C0\u03B5\u03C1\u03B9\u03C3\u03C3\u03CC\u03C4\u03B5\u03C1\u03BF\u03C5\u03C2 \u03B3\u03B5\u03AF\u03C4\u03BF\u03BD\u03B5\u03C2 \u03C3\u03C4\u03B7\u03BD \u03A0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE 5.",
           footerDisc: "\u03A0\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03BA\u03B5 \u03B1\u03C0\u03CC \u03C4\u03BF\u03C5\u03C2 \u03A6\u03AF\u03BB\u03BF\u03C5\u03C2 \u03C4\u03BF\u03C5 \u03A4\u03B6\u03AF\u03BC\u03B9 \u039B\u03AF\u03BC\u03B1 \u03B3\u03B9\u03B1 \u03C4\u03BF \u0394\u03B7\u03BC\u03BF\u03C4\u03B9\u03BA\u03CC \u03A3\u03C5\u03BC\u03B2\u03BF\u03CD\u03BB\u03B9\u03BF \u03A0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE\u03C2 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         it: {
           nav: { "Home": "Home", "Meet Jimmy": "Conosci Jimmy", "Blueprint": "Piano d'Azione", "Endorsements": "Endorsement", "Get Involved": "Partecipa", "Contact": "Contatti" },
@@ -22784,7 +22784,7 @@
           contactSupportTitle: "Supporta la Campagna",
           contactSupportBody: "Ogni donazione ci aiuta a raggiungere pi\xF9 vicini nel Distretto 5.",
           footerDisc: "Pagato dagli Amici di Jimmy Lima per il Consiglio Comunale Distretto 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         },
         ar: {
           nav: { "Home": "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629", "Meet Jimmy": "\u062A\u0639\u0631\u0651\u0641 \u0639\u0644\u0649 \u062C\u064A\u0645\u064A", "Blueprint": "\u062E\u0637\u0629 \u0627\u0644\u0639\u0645\u0644", "Endorsements": "\u0627\u0644\u062A\u0623\u064A\u064A\u062F\u0627\u062A", "Get Involved": "\u0627\u0646\u0636\u0645 \u0625\u0644\u064A\u0646\u0627", "Contact": "\u0627\u062A\u0635\u0644 \u0628\u0646\u0627" },
@@ -22858,7 +22858,7 @@
           contactSupportTitle: "\u062F\u0639\u0645 \u0627\u0644\u062D\u0645\u0644\u0629",
           contactSupportBody: "\u0643\u0644 \u062A\u0628\u0631\u0639 \u064A\u0633\u0627\u0639\u062F\u0646\u0627 \u0641\u064A \u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u0627\u0644\u0645\u0632\u064A\u062F \u0645\u0646 \u0627\u0644\u062C\u064A\u0631\u0627\u0646 \u0641\u064A \u0627\u0644\u062F\u0627\u0626\u0631\u0629 5.",
           footerDisc: "\u0628\u062A\u0645\u0648\u064A\u0644 \u0645\u0646 \u0623\u0635\u062F\u0642\u0627\u0621 \u062C\u064A\u0645\u064A \u0644\u064A\u0645\u0627 \u0644\u0645\u062C\u0644\u0633 \u0627\u0644\u0645\u062F\u064A\u0646\u0629 \u0627\u0644\u062F\u0627\u0626\u0631\u0629 5. FPPC ID: Pending.",
-          footerSocial: ["Facebook", "Instagram"]
+          footerSocial: ["Facebook", "Instagram", "TikTok"]
         }
       };
       PDF_URLS = [require_priority_1(), require_priority_2(), require_priority_3(), require_priority_4(), require_priority_5(), require_priority_6()];
